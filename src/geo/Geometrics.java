@@ -14,33 +14,36 @@ public class Geometrics {
     private static int z3 = 69;
 
     public static void main(String[] args) {
-        // area ... Fläche
+        // area
         System.out.println("Square area");
-        System.out.println("x * x = " + x * x);
-        System.out.println("x1 * x1 = " + x1 * x1);
-        System.out.println("x2 * x2 = " + x2 * x2);
-        System.out.println("y * y = " + y * y);
-
+        squarearea(x,"x");
+        squarearea(x1,"x1");
+        squarearea(x2,"x2");
+        squarearea(y,"y");
+        
+        
         // perimeter ... Umfang
         System.out.println("Square perimeter");
-        System.out.println("4 * x = " + 4 * x);
-        System.out.println("4 * x1 = " + 4 * x1);
-        System.out.println("4 * x2 = " + 4 * x2);
-        System.out.println("4 * y = " + 4 * y);
+        squareperimeter(x,"x");
+        squareperimeter(x1,"x1");
+        squareperimeter(x2,"x2");
+        squareperimeter(y,"y");
+ 
 
         System.out.println("Rectangle area");
-        System.out.println("x * y = " + x * y);
-        System.out.println("x1 * y1 = " + x1 * y1);
-        System.out.println("x2 * y2 = " + x2 * y2);
-        System.out.println("x3 * y3 = " + x3 * y3);
-
+        rectanglearea(x,y,"x","y");
+        rectanglearea(x1,y1,"x1","y1");
+        rectanglearea(x2,y2,"x2","y2");
+        rectanglearea(x3,y3,"x3","y3");
+        
         System.out.println("Rectangle perimeter");
-        System.out.println("x + y = " + x + y);
-        System.out.println("x1 + y1 = " + x1 + y1);
-        System.out.println("x2 + y2 = " + x2 + y2);
-        System.out.println("x3 + y3 = " + x3 + y3);
+        rectangleperimeter(x,y,"x","y");
+        rectangleperimeter(x1,y1,"x1","y1");
+        rectangleperimeter(x2,y2,"x2","y2");
+        rectangleperimeter(x3,y3,"x3","y3");
 
         System.out.println("We can also calculate some volumes");
+        volume(x*x,z,"x*x*z");
         /*
             z is our height
             y is our radius
@@ -55,4 +58,35 @@ public class Geometrics {
         System.out.println("Ungula");
         System.out.println((double) (2 * x3 * z3) / 3);
     }
+    public static void squarearea (int x, String name){
+        System.out.println(name +" * "+name+" = " + x * x);
+    }
+    public static void squarearea (Double x, String name){
+        System.out.println(name +" * "+name+" = " + x * x);
+    }
+    public static void squareperimeter (int x, String name){
+        System.out.println("4 * " +name+ " = " + 4 * x);
+    }
+    public static void squareperimeter (Double x, String name){
+        System.out.println("4 * " +name+ " = " + 4 * x);
+    }
+    public static void rectanglearea (int x, int y, String namex, String namey){
+        System.out.println(namex + " * " + namey +" = " + x * y);
+    }
+    public static void rectanglearea (Double x, Double y, String namex, String namey){
+        System.out.println(namex + " * " + namey +" = " + x * y);
+    }
+    public static void rectangleperimeter (int x, int y, String namex, String namey){
+        System.out.println(namex + " + " + namey + " = " + ((x + y)*2));
+    }
+    public static void rectangleperimeter (Double x, Double y, String namex, String namey){
+        System.out.println(namex + " + " + namey + " = " + ((x + y)*2));
+    }
+    public static void volume (int area, int x, String name){
+        System.out.println("The volume of " + name +"is: " + (area*x));
+    }
+    public static void volume (Double area, Double x, String name){
+        System.out.println("The volume of " + name +"is: " + (area*x));
+    }
+
 }
