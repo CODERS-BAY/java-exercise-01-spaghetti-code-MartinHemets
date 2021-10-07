@@ -22,7 +22,7 @@ public class Geometrics {
         squarearea(y,"y");
         
         
-        // perimeter ... Umfang
+        // perimeter
         System.out.println("Square perimeter");
         squareperimeter(x,"x");
         squareperimeter(x1,"x1");
